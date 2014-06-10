@@ -8,7 +8,7 @@
 * [Closures](closures/README.md)
 * [Classes](classes/README.md)
 * [Enums](enums/README.md)
-* [Other](other/README.md)
+* Other
     * [Protocols](other/protocols.md)
     * [Extensions](other/extensions.md)
     * [Operator Overloading](other/operator_overloading.md)
