@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Functions | Swift Cheat Sheet</title>
+        <title>Classes | Swift Cheat Sheet</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -19,10 +19,10 @@
     <meta name="author" content="MHM5000">
     
     
-    <link rel="next" href="../closures/README.html" />
+    <link rel="next" href="../enums/README.html" />
     
     
-    <link rel="prev" href="../control_flow/README.html" />
+    <link rel="prev" href="../closures/README.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="MHM5000/swift-cheat-sheet" data-level="5" data-basepath=".." data-revision="1402573718283">
+    <div class="book" data-github="MHM5000/swift-cheat-sheet" data-level="7" data-basepath=".." data-revision="1402573718283">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -118,7 +118,7 @@
         
         
         <li>
-            <a href="https://github.com/MHM5000/swift-cheat-sheet/edit/master/functions/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
+            <a href="https://github.com/MHM5000/swift-cheat-sheet/edit/master/classes/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
 
@@ -286,7 +286,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 35.714285714285715%;min-width: 28.571428571428573%;"></div>
+        <div class="inner" style="width: 50%;min-width: 42.857142857142854%;"></div>
     </div>
     <div class="chapters">
     
@@ -302,9 +302,9 @@
     
         <a href="../functions/README.html" title="Functions" class="chapter done new-chapter" data-progress="5" style="left: 35.714285714285715%;"></a>
     
-        <a href="../closures/README.html" title="Closures" class="chapter  new-chapter" data-progress="6" style="left: 42.857142857142854%;"></a>
+        <a href="../closures/README.html" title="Closures" class="chapter done new-chapter" data-progress="6" style="left: 42.857142857142854%;"></a>
     
-        <a href="../classes/README.html" title="Classes" class="chapter  new-chapter" data-progress="7" style="left: 50%;"></a>
+        <a href="../classes/README.html" title="Classes" class="chapter done new-chapter" data-progress="7" style="left: 50%;"></a>
     
         <a href="../enums/README.html" title="Enums" class="chapter  new-chapter" data-progress="8" style="left: 57.142857142857146%;"></a>
     
@@ -325,48 +325,73 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_36">
+                    <section class="normal" id="section-gitbook_31">
                     
-                        <h1 id="functions">Functions</h1>
-<p>Functions are a first-class type, meaning they can be nested in functions and can be passed around</p>
-<pre><code class="lang-js"><span class="hljs-comment">// Function that returns a String</span>
-func greet(name: <span class="hljs-built_in">String</span>, day: <span class="hljs-built_in">String</span>) -&gt; <span class="hljs-built_in">String</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">"Hello \(name), today is \(day)."</span>
+                        <h1 id="classes">Classes</h1>
+<p>All methods and properties of a class are public. If you just need to store data
+in a structured object, you should use a <code>struct</code></p>
+<p>```js
+// A parent class of Square
+class Shape {
+    init() {
+    }</p>
+<pre><code>func getArea() -&gt; Int {
+    return 0;
 }
-greet(<span class="hljs-string">"Bob"</span>, <span class="hljs-string">"Tuesday"</span>) <span class="hljs-comment">// call the greet function</span>
-
-<span class="hljs-comment">// Function that returns multiple items in a tuple</span>
-func getGasPrices() -&gt; (Double, Double, Double) {
-    <span class="hljs-keyword">return</span> (<span class="hljs-number">3.59</span>, <span class="hljs-number">3.69</span>, <span class="hljs-number">3.79</span>)
-}
-
-<span class="hljs-comment">// Function that takes variable number of arguments, collecting them into an array</span>
-func setup(numbers: Int...) {
-    <span class="hljs-comment">// do something</span>
-}
-setup(<span class="hljs-number">5</span>, <span class="hljs-number">16</span>, <span class="hljs-number">38</span>) <span class="hljs-comment">// call the setup function with array of inputs</span>
-
-<span class="hljs-comment">// Nested functions can organize code that is long or complex</span>
-func printWelcomeMessage() -&gt; <span class="hljs-built_in">String</span> {
-    <span class="hljs-keyword">var</span> y = <span class="hljs-string">"Hello,"</span>
-    func add() {
-        y += <span class="hljs-string">" world"</span>
+</code></pre><p>}</p>
+<p>// A simple class <code>Square</code> extends <code>Shape</code>
+class Square: Shape {
+    var sideLength: Int</p>
+<pre><code>// Custom getter and setter property
+var perimeter: Int {
+    get {
+        return 4 * sideLength
     }
-    add()
-    <span class="hljs-keyword">return</span> y
-}
-printWelcomeMessage() <span class="hljs-comment">// Hello world</span>
-
-<span class="hljs-comment">// Passing and returning functions</span>
-func makeIncrementer() -&gt; (Int -&gt; Int) {
-    func addOne(number: Int) -&gt; Int {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> + number
+    set {
+        sideLength = newValue / 4
     }
-    <span class="hljs-keyword">return</span> addOne
 }
-<span class="hljs-keyword">var</span> increment = makeIncrementer()
-increment(<span class="hljs-number">7</span>)
-</code></pre>
+
+init(sideLength: Int) {
+    self.sideLength = sideLength
+    super.init()
+}
+
+func shrink() {
+    if sideLength &gt; 0 {
+        --sideLength
+    }
+}
+
+override func getArea() -&gt; Int {
+    return sideLength * sideLength
+}
+</code></pre><p>}
+var mySquare = Square(sideLength: 5)
+print(mySquare.getArea()) // 25
+mySquare.shrink()
+print(mySquare.sideLength) // 4</p>
+<p>// Access the Square class object,
+// equivalent to [Square class] in Objective-C.
+Square.self</p>
+<p>//example for &#39;willSet&#39; and &#39;didSet&#39;
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps) {
+            println(&quot;About to set totalSteps to (newTotalSteps)&quot;)
+        }
+        didSet {
+            if totalSteps &gt; oldValue  {
+                println(&quot;Added (totalSteps - oldValue) steps to &#39;totalSteps&#39;&quot;)
+            }
+        }
+    }
+}
+var stepCounter = StepCounter()
+stepCounter.totalSteps = 100 // About to set totalSteps to 100 \n Added 100 steps to &#39;totalSteps&#39;
+stepCounter.totalSteps = 145 // About to set totalSteps to 145 \n Added 45 steps to &#39;totalSteps&#39;</p>
+<p>// If you don&#39;t need a custom getter and setter, but still want to run code
+// before an after getting or setting a property, you can use <code>willSet</code> and <code>didSet</code></p>
 
                     
                     </section>
@@ -376,10 +401,10 @@ increment(<span class="hljs-number">7</span>)
         </div>
 
         
-        <a href="../control_flow/README.html" class="navigation navigation-prev " aria-label="Previous page: Control Flow"><i class="fa fa-angle-left"></i></a>
+        <a href="../closures/README.html" class="navigation navigation-prev " aria-label="Previous page: Closures"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../closures/README.html" class="navigation navigation-next " aria-label="Next page: Closures"><i class="fa fa-angle-right"></i></a>
+        <a href="../enums/README.html" class="navigation navigation-next " aria-label="Next page: Enums"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

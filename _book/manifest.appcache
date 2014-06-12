@@ -1,20 +1,23 @@
 CACHE MANIFEST
-# Revision 1402384083079
+# Revision 1402573718283
 
 CACHE:
-index.html
+control_flow/README.html
 arrays/README.html
 basics/README.html
-control_flow/README.html
+classes/README.html
+closures/README.html
+index.html
 dictionaries/README.html
+enums/README.html
 functions/README.html
+goodbye/README.html
+other/emojiunicode_support.html
+other/extensions.html
+other/generics.html
+other/operator_overloading.html
+other/protocols.html
 gitbook\app.js
-gitbook\fonts\anonymouspro\400.woff
-gitbook\fonts\anonymouspro\400i.woff
-gitbook\fonts\anonymouspro\700.woff
-gitbook\fonts\anonymouspro\700i.woff
-gitbook\fonts\ebgaramond\400.woff
-gitbook\fonts\ebgaramond\400i.woff
 gitbook\fonts\fontawesome\FontAwesome.otf
 gitbook\fonts\fontawesome\fontawesome-webfont.eot
 gitbook\fonts\fontawesome\fontawesome-webfont.svg
@@ -45,7 +48,6 @@ gitbook\jsrepl\sandbox.js
 gitbook\print.css
 gitbook\style.css
 gitbook\plugins\gitbook-plugin-mathjax\plugin.js
-gitbook\plugins\gitbook-plugin-mixpanel\plugin.js
 
 NETWORK:
 *

@@ -1,97 +1,84 @@
 <!DOCTYPE HTML>
 <html lang="en-US" manifest="../manifest.appcache">
-    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+    
+    <head>
         
         <meta charset="UTF-8">
         <title>Control Flow | Swift Cheat Sheet</title>
-
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="MHM5000">
-        <meta name="description" content="&lt;p align=&quot;center&quot;&gt;
-  &lt;img src=&quot;./img/swift-hero.png&quot; alt=&quot;Bird&quot;&gt;
-  &lt;br&gt;
-  &lt;img src=&quot;./img/swift-text.png&quot; alt=&quot;Swift&quot; width=&quot;160px&quot;&gt;
-  &lt;br&gt;
-&lt;/p&gt;">
-        <meta name="keywords" content="gitbook,github" >
-        <meta name="generator" content="www.gitbook.io">
-
-        
-        <link rel="next" href="../functions/README.html" />
-        
-        
-        <link rel="prev" href="../dictionaries/README.html" />
-        
-
-        <meta property="og:title" content="Control Flow | Swift Cheat Sheet">
-        <meta property="og:site_name" content="Swift Cheat Sheet">
-        <meta property="og:type" content="book">
-        <meta property="og:locale" content="en_US">
-
-        <meta property="book:author" content="https://github.com/MHM5000">
-        <meta property="book:tag" content="GitBook">
-
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <meta name="author" content="MHM5000">
+    
+    
+    <link rel="next" href="../functions/README.html" />
+    
+    
+    <link rel="prev" href="../dictionaries/README.html" />
+    
 
-        <link rel="shortcut icon" href="..\gitbook/images/favicon.ico" type="image/x-icon">
         
     </head>
     <body>
         
-
-        <link rel="stylesheet" href="..\gitbook/style.css">
         
+<link rel="stylesheet" href="../gitbook/style.css">
 
 
         
-    <div class="book" data-github="MHM5000/swift-cheat-sheet" data-level="4" data-basepath=".." data-revision="1402384083078">
+    <div class="book" data-github="MHM5000/swift-cheat-sheet" data-level="4" data-basepath=".." data-revision="1402573718283">
     <div class="book-header">
     <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     
-    <a href="https://github.com/MHM5000/swift-cheat-sheet" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    <a href="https://github.com/MHM5000/swift-cheat-sheet" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
     
-    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
-    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
     <span id="font-settings-wrapper">
-        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
         </a>
         <div class="dropdown-menu font-settings">
-	<div class="dropdown-caret">
-  <span class="caret-outer"></span>
-  <span class="caret-inner"></span>
-</div>
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
 
-	<div class="btn-group btn-block">
-		<button id="reduce-font-size" class="btn btn-default">A</button>
-		<button id="enlarge-font-size" class="btn btn-default">A</button>
-	</div>
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
 
-	<ul class="list-group font-family-list">
-		<li class="list-group-item" data-font="0">Serif</li>
-		<li class="list-group-item" data-font="1">Sans</li>
-	</ul>
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
 
-	<div class="btn-group btn-group-xs btn-block color-theme-list">
-	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
-	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
-	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
-	</div>
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
 </div>
 
     </span>
 
     <!-- Actions Right -->
     
-    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
     
     
-    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
     
     
-    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
     
 
     
@@ -106,26 +93,32 @@
     </h1>
 </div>
 
-    <div class="book-summary">
+    
+
+<div class="book-summary">
     <div class="book-search">
         <input type="text" placeholder="Search" class="form-control" />
     </div>
     <ul class="summary">
         
+        
+        
         <li>
-            <a href="https://github.com/MHM5000" target="blank">About the author</a>
+            <a href="https://github.com/MHM5000" target="blank" class="author-link">About the author</a>
         </li>
         
 
         
+        
         <li>
-            <a href="https://github.com/MHM5000/swift-cheat-sheet/issues" target="blank">Questions and Issues</a>
+            <a href="https://github.com/MHM5000/swift-cheat-sheet/issues" target="blank"class="issues-link">Questions and Issues</a>
         </li>
         
 
         
+        
         <li>
-            <a href="https://github.com/MHM5000/swift-cheat-sheet/edit/master/control_flow/README.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/MHM5000/swift-cheat-sheet/edit/master/control_flow/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
 
@@ -137,56 +130,152 @@
             <a href="../"><i class="fa fa-check"></i> Introduction</a>
         </li>
         
-            <li  data-level="1" data-path="basics/README.html">
+    
+        <li class="chapter " data-level="1" data-path="basics/README.html">
+            
+            <a href="../basics/README.html">
+                <i class="fa fa-check"></i> <b>1.</b> Basics
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="arrays/README.html">
+            
+            <a href="../arrays/README.html">
+                <i class="fa fa-check"></i> <b>2.</b> Arrays
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="dictionaries/README.html">
+            
+            <a href="../dictionaries/README.html">
+                <i class="fa fa-check"></i> <b>3.</b> Dictionaries
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="control_flow/README.html">
+            
+            <a href="../control_flow/README.html">
+                <i class="fa fa-check"></i> <b>4.</b> Control Flow
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="functions/README.html">
+            
+            <a href="../functions/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> Functions
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="closures/README.html">
+            
+            <a href="../closures/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> Closures
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="classes/README.html">
+            
+            <a href="../classes/README.html">
+                <i class="fa fa-check"></i> <b>7.</b> Classes
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="enums/README.html">
+            
+            <a href="../enums/README.html">
+                <i class="fa fa-check"></i> <b>8.</b> Enums
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" >
+            
+            <span><b>9.</b> Other</span>
+            
+            
+            <ul class="articles">
                 
-                <a href="../basics/README.html">
-                    <i class="fa fa-check"></i> <b>1.</b> Basics
-                </a>
-                
-                
-            </li>
-        
-            <li  data-level="2" data-path="arrays/README.html">
-                
-                <a href="../arrays/README.html">
-                    <i class="fa fa-check"></i> <b>2.</b> Arrays
-                </a>
-                
-                
-            </li>
-        
-            <li  data-level="3" data-path="dictionaries/README.html">
-                
-                <a href="../dictionaries/README.html">
-                    <i class="fa fa-check"></i> <b>3.</b> Dictionaries
-                </a>
-                
-                
-            </li>
-        
-            <li  data-level="4" data-path="control_flow/README.html">
-                
-                <a href="../control_flow/README.html">
-                    <i class="fa fa-check"></i> <b>4.</b> Control Flow
-                </a>
-                
-                
-            </li>
-        
-            <li  data-level="5" data-path="functions/README.html">
-                
-                <a href="../functions/README.html">
-                    <i class="fa fa-check"></i> <b>5.</b> Functions
-                </a>
-                
-                
-            </li>
-        
+    
+        <li class="chapter " data-level="9.1" data-path="other/protocols.html">
+            
+            <a href="../other/protocols.html">
+                <i class="fa fa-check"></i> <b>9.1.</b> Protocols
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="other/extensions.html">
+            
+            <a href="../other/extensions.html">
+                <i class="fa fa-check"></i> <b>9.2.</b> Extensions
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="other/operator_overloading.html">
+            
+            <a href="../other/operator_overloading.html">
+                <i class="fa fa-check"></i> <b>9.3.</b> Operator Overloading
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="other/generics.html">
+            
+            <a href="../other/generics.html">
+                <i class="fa fa-check"></i> <b>9.4.</b> Generics
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="other/emojiunicode_support.html">
+            
+            <a href="../other/emojiunicode_support.html">
+                <i class="fa fa-check"></i> <b>9.5.</b> Emoji/Unicode support
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="goodbye/README.html">
+            
+            <a href="../goodbye/README.html">
+                <i class="fa fa-check"></i> <b>10.</b> GoodBye
+            </a>
+            
+            
+        </li>
+    
+
 
         
         <li class="divider"></li>
         <li>
-            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
         </li>
         
     </ul>
@@ -197,83 +286,101 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 80%;min-width: 60%;"></div>
+        <div class="inner" style="width: 28.571428571428573%;min-width: 21.428571428571427%;"></div>
     </div>
     <div class="chapters">
     
         <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
     
-        <a href="../basics/README.html" title="Basics" class="chapter done new-chapter" data-progress="1" style="left: 20%;"></a>
+        <a href="../basics/README.html" title="Basics" class="chapter done new-chapter" data-progress="1" style="left: 7.142857142857143%;"></a>
     
-        <a href="../arrays/README.html" title="Arrays" class="chapter done new-chapter" data-progress="2" style="left: 40%;"></a>
+        <a href="../arrays/README.html" title="Arrays" class="chapter done new-chapter" data-progress="2" style="left: 14.285714285714286%;"></a>
     
-        <a href="../dictionaries/README.html" title="Dictionaries" class="chapter done new-chapter" data-progress="3" style="left: 60%;"></a>
+        <a href="../dictionaries/README.html" title="Dictionaries" class="chapter done new-chapter" data-progress="3" style="left: 21.428571428571427%;"></a>
     
-        <a href="../control_flow/README.html" title="Control Flow" class="chapter done new-chapter" data-progress="4" style="left: 80%;"></a>
+        <a href="../control_flow/README.html" title="Control Flow" class="chapter done new-chapter" data-progress="4" style="left: 28.571428571428573%;"></a>
     
-        <a href="../functions/README.html" title="Functions" class="chapter  new-chapter" data-progress="5" style="left: 100%;"></a>
+        <a href="../functions/README.html" title="Functions" class="chapter  new-chapter" data-progress="5" style="left: 35.714285714285715%;"></a>
+    
+        <a href="../closures/README.html" title="Closures" class="chapter  new-chapter" data-progress="6" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../classes/README.html" title="Classes" class="chapter  new-chapter" data-progress="7" style="left: 50%;"></a>
+    
+        <a href="../enums/README.html" title="Enums" class="chapter  new-chapter" data-progress="8" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../other/protocols.html" title="Protocols" class="chapter  " data-progress="9.1" style="left: 64.28571428571429%;"></a>
+    
+        <a href="../other/extensions.html" title="Extensions" class="chapter  " data-progress="9.2" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../other/operator_overloading.html" title="Operator Overloading" class="chapter  " data-progress="9.3" style="left: 78.57142857142857%;"></a>
+    
+        <a href="../other/generics.html" title="Generics" class="chapter  " data-progress="9.4" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../other/emojiunicode_support.html" title="Emoji/Unicode support" class="chapter  " data-progress="9.5" style="left: 92.85714285714286%;"></a>
+    
+        <a href="../goodbye/README.html" title="GoodBye" class="chapter  " data-progress="10" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_149">
+                    <section class="normal" id="section-gitbook_28">
                     
                         <h1 id="control-flow">Control Flow</h1>
 <pre><code class="lang-js"><span class="hljs-comment">// for loop (array)</span>
 <span class="hljs-keyword">let</span> myArray = [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>]
 <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> myArray {
-  <span class="hljs-keyword">if</span> value == <span class="hljs-number">1</span> {
-    println(<span class="hljs-string">"One!"</span>)
-  } <span class="hljs-keyword">else</span> {
-    println(<span class="hljs-string">"Not one!"</span>)
-  }
+    <span class="hljs-keyword">if</span> value == <span class="hljs-number">1</span> {
+        println(<span class="hljs-string">"One!"</span>)
+    } <span class="hljs-keyword">else</span> {
+        println(<span class="hljs-string">"Not one!"</span>)
+    }
 }
 
 <span class="hljs-comment">// for loop (dictionary)</span>
 <span class="hljs-keyword">var</span> dict = [
-  <span class="hljs-string">"name"</span>: <span class="hljs-string">"Steve Jobs"</span>,
-  <span class="hljs-string">"title"</span>: <span class="hljs-string">"CEO"</span>,
-  <span class="hljs-string">"company"</span>: <span class="hljs-string">"Apple"</span>
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Steve Jobs"</span>,
+    <span class="hljs-string">"title"</span>: <span class="hljs-string">"CEO"</span>,
+    <span class="hljs-string">"company"</span>: <span class="hljs-string">"Apple"</span>
 ]
 <span class="hljs-keyword">for</span> (key, value) <span class="hljs-keyword">in</span> dict {
-  println(<span class="hljs-string">"\(key): \(value)"</span>)
+    println(<span class="hljs-string">"\(key): \(value)"</span>)
 }
 
 <span class="hljs-comment">// for loop (range)</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">1.</span>.<span class="hljs-number">.1</span> { <span class="hljs-comment">// [-1, 0, 1]</span>
-  println(i)
+    println(i)
 }
 <span class="hljs-comment">// use .. to exclude the last number</span>
 
 <span class="hljs-comment">// for loop (ignoring the current value of the range on each iteration of the loop)</span>
 <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1.</span>.<span class="hljs-number">.3</span> {
-  <span class="hljs-comment">// Do something three times.</span>
+    <span class="hljs-comment">// Do something three times.</span>
 }
 
 <span class="hljs-comment">// while loop</span>
 <span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>
 <span class="hljs-keyword">while</span> i &lt; <span class="hljs-number">1000</span> {
-  i *= <span class="hljs-number">2</span>
+    i *= <span class="hljs-number">2</span>
 }
 
 <span class="hljs-comment">// do-while loop</span>
 <span class="hljs-keyword">do</span> {
-  println(<span class="hljs-string">"hello"</span>)
+    println(<span class="hljs-string">"hello"</span>)
 } <span class="hljs-keyword">while</span> <span class="hljs-number">1</span> == <span class="hljs-number">2</span>
 
 <span class="hljs-comment">// Switch</span>
 <span class="hljs-keyword">let</span> vegetable = <span class="hljs-string">"red pepper"</span>
 <span class="hljs-keyword">switch</span> vegetable {
 <span class="hljs-keyword">case</span> <span class="hljs-string">"celery"</span>:
-  <span class="hljs-keyword">let</span> vegetableComment = <span class="hljs-string">"Add some raisins and make ants on a log."</span>
+    <span class="hljs-keyword">let</span> vegetableComment = <span class="hljs-string">"Add some raisins and make ants on a log."</span>
 <span class="hljs-keyword">case</span> <span class="hljs-string">"cucumber"</span>, <span class="hljs-string">"watercress"</span>:
-  <span class="hljs-keyword">let</span> vegetableComment = <span class="hljs-string">"That would make a good tea sandwich."</span>
+    <span class="hljs-keyword">let</span> vegetableComment = <span class="hljs-string">"That would make a good tea sandwich."</span>
 <span class="hljs-keyword">case</span> <span class="hljs-keyword">let</span> x where x.hasSuffix(<span class="hljs-string">"pepper"</span>):
-  <span class="hljs-keyword">let</span> vegetableComment = <span class="hljs-string">"Is it a spicy \(x)?"</span>
+    <span class="hljs-keyword">let</span> vegetableComment = <span class="hljs-string">"Is it a spicy \(x)?"</span>
 <span class="hljs-keyword">default</span>: <span class="hljs-comment">// required (in order to cover all possible input)</span>
-  <span class="hljs-keyword">let</span> vegetableComment = <span class="hljs-string">"Everything tastes good in soup."</span>
+    <span class="hljs-keyword">let</span> vegetableComment = <span class="hljs-string">"Everything tastes good in soup."</span>
 }
 
 <span class="hljs-comment">// Switch to validate plist content</span>
@@ -283,13 +390,13 @@
     <span class="hljs-string">"abbr"</span> : <span class="hljs-string">"QD"</span>
 ]
 <span class="hljs-keyword">switch</span> (city[<span class="hljs-string">"name"</span>], city[<span class="hljs-string">"population"</span>], city[<span class="hljs-string">"abbr"</span>]) {
-  <span class="hljs-keyword">case</span> (.Some(<span class="hljs-keyword">let</span> cityName as NSString),
+    <span class="hljs-keyword">case</span> (.Some(<span class="hljs-keyword">let</span> cityName as NSString),
         .Some(<span class="hljs-keyword">let</span> pop as NSNumber),
         .Some(<span class="hljs-keyword">let</span> abbr as NSString))
-  where abbr.length == <span class="hljs-number">2</span>:
-    println(<span class="hljs-string">"City Name: \(cityName) | Abbr.:\(abbr) Population: \(pop)"</span>)
-  <span class="hljs-keyword">default</span>:
-    println(<span class="hljs-string">"Not a valid city"</span>)
+    where abbr.length == <span class="hljs-number">2</span>:
+        println(<span class="hljs-string">"City Name: \(cityName) | Abbr.:\(abbr) Population: \(pop)"</span>)
+    <span class="hljs-keyword">default</span>:
+        println(<span class="hljs-string">"Not a valid city"</span>)
 }
 </code></pre>
 
@@ -301,32 +408,24 @@
         </div>
 
         
-        <a href="../dictionaries/README.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        <a href="../dictionaries/README.html" class="navigation navigation-prev " aria-label="Previous page: Dictionaries"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../functions/README.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        <a href="../functions/README.html" class="navigation navigation-next " aria-label="Next page: Functions"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
-        <script src="..\gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
-        <script src="..\gitbook/app.js"></script>
-        
-
-    
-    <script src="..\gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
-    
+<script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="../gitbook/app.js"></script>
 
     
     <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
-    <script src="..\gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
     
 
 <script>
@@ -336,5 +435,7 @@ require(["gitbook"], function(gitbook) {
 });
 </script>
 
+        
     </body>
+    
 </html>

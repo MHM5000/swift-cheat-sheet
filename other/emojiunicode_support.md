@@ -3,7 +3,7 @@
 You can use any unicode character (including emoji) as variable names or in Strings.
 
 ```js
-  var 😄 = "Smiley"
+  var 😄 = "Smiley"                                 
   println(😄) // will print "Smiley"
   let 🌍 = "🐶🐺🐱🐭"
   var 🚢: String[] = []
@@ -15,4 +15,4 @@ You can use any unicode character (including emoji) as variable names or in Stri
 
 **Which, in Xcode looks like**
 
-<img class="mobile-img" src="./img/swift-emoji.png" alt="Swift Emoji">
+<img src="../img/swift-emoji.png" alt="Swift Emoji" width="400px">

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Functions | Swift Cheat Sheet</title>
+        <title>Closures | Swift Cheat Sheet</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.5.2">
@@ -19,10 +19,10 @@
     <meta name="author" content="MHM5000">
     
     
-    <link rel="next" href="../closures/README.html" />
+    <link rel="next" href="../classes/README.html" />
     
     
-    <link rel="prev" href="../control_flow/README.html" />
+    <link rel="prev" href="../functions/README.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="MHM5000/swift-cheat-sheet" data-level="5" data-basepath=".." data-revision="1402573718283">
+    <div class="book" data-github="MHM5000/swift-cheat-sheet" data-level="6" data-basepath=".." data-revision="1402573718283">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -118,7 +118,7 @@
         
         
         <li>
-            <a href="https://github.com/MHM5000/swift-cheat-sheet/edit/master/functions/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
+            <a href="https://github.com/MHM5000/swift-cheat-sheet/edit/master/closures/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
 
@@ -286,7 +286,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 35.714285714285715%;min-width: 28.571428571428573%;"></div>
+        <div class="inner" style="width: 42.857142857142854%;min-width: 35.714285714285715%;"></div>
     </div>
     <div class="chapters">
     
@@ -302,7 +302,7 @@
     
         <a href="../functions/README.html" title="Functions" class="chapter done new-chapter" data-progress="5" style="left: 35.714285714285715%;"></a>
     
-        <a href="../closures/README.html" title="Closures" class="chapter  new-chapter" data-progress="6" style="left: 42.857142857142854%;"></a>
+        <a href="../closures/README.html" title="Closures" class="chapter done new-chapter" data-progress="6" style="left: 42.857142857142854%;"></a>
     
         <a href="../classes/README.html" title="Classes" class="chapter  new-chapter" data-progress="7" style="left: 50%;"></a>
     
@@ -325,47 +325,30 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_36">
+                    <section class="normal" id="section-gitbook_32">
                     
-                        <h1 id="functions">Functions</h1>
-<p>Functions are a first-class type, meaning they can be nested in functions and can be passed around</p>
-<pre><code class="lang-js"><span class="hljs-comment">// Function that returns a String</span>
-func greet(name: <span class="hljs-built_in">String</span>, day: <span class="hljs-built_in">String</span>) -&gt; <span class="hljs-built_in">String</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">"Hello \(name), today is \(day)."</span>
-}
-greet(<span class="hljs-string">"Bob"</span>, <span class="hljs-string">"Tuesday"</span>) <span class="hljs-comment">// call the greet function</span>
+                        <h1 id="closures">Closures</h1>
+<p>Functions are special case closures ({})</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Closure example.</span>
+<span class="hljs-comment">// `-&gt;` separates the arguments and return type</span>
+<span class="hljs-comment">// `in` separates the closure header from the closure body</span>
+<span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+numbers.map({
+    (number: Int) -&gt; Int <span class="hljs-keyword">in</span>
+    <span class="hljs-keyword">let</span> result = <span class="hljs-number">3</span> * number
+    <span class="hljs-keyword">return</span> result
+    })
 
-<span class="hljs-comment">// Function that returns multiple items in a tuple</span>
-func getGasPrices() -&gt; (Double, Double, Double) {
-    <span class="hljs-keyword">return</span> (<span class="hljs-number">3.59</span>, <span class="hljs-number">3.69</span>, <span class="hljs-number">3.79</span>)
-}
+<span class="hljs-comment">// When the type is known, like above, we can do this</span>
+numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>]
+numbers = numbers.map({ number <span class="hljs-keyword">in</span> <span class="hljs-number">3</span> * number })
+println(numbers) <span class="hljs-comment">// [3, 6, 18]</span>
 
-<span class="hljs-comment">// Function that takes variable number of arguments, collecting them into an array</span>
-func setup(numbers: Int...) {
-    <span class="hljs-comment">// do something</span>
-}
-setup(<span class="hljs-number">5</span>, <span class="hljs-number">16</span>, <span class="hljs-number">38</span>) <span class="hljs-comment">// call the setup function with array of inputs</span>
-
-<span class="hljs-comment">// Nested functions can organize code that is long or complex</span>
-func printWelcomeMessage() -&gt; <span class="hljs-built_in">String</span> {
-    <span class="hljs-keyword">var</span> y = <span class="hljs-string">"Hello,"</span>
-    func add() {
-        y += <span class="hljs-string">" world"</span>
-    }
-    add()
-    <span class="hljs-keyword">return</span> y
-}
-printWelcomeMessage() <span class="hljs-comment">// Hello world</span>
-
-<span class="hljs-comment">// Passing and returning functions</span>
-func makeIncrementer() -&gt; (Int -&gt; Int) {
-    func addOne(number: Int) -&gt; Int {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> + number
-    }
-    <span class="hljs-keyword">return</span> addOne
-}
-<span class="hljs-keyword">var</span> increment = makeIncrementer()
-increment(<span class="hljs-number">7</span>)
+<span class="hljs-comment">// When a closure is the last argument, you can place it after the )</span>
+<span class="hljs-comment">// When a closure is the only argument, you can omit the () entirely</span>
+<span class="hljs-comment">// You can also refer to closure arguments by position ($0, $1, ...) rather than name</span>
+numbers = [<span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>]
+numbers.map { <span class="hljs-number">3</span> * $<span class="hljs-number">0</span> } <span class="hljs-comment">// [6, 15, 3]</span>
 </code></pre>
 
                     
@@ -376,10 +359,10 @@ increment(<span class="hljs-number">7</span>)
         </div>
 
         
-        <a href="../control_flow/README.html" class="navigation navigation-prev " aria-label="Previous page: Control Flow"><i class="fa fa-angle-left"></i></a>
+        <a href="../functions/README.html" class="navigation navigation-prev " aria-label="Previous page: Functions"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../closures/README.html" class="navigation navigation-next " aria-label="Next page: Closures"><i class="fa fa-angle-right"></i></a>
+        <a href="../classes/README.html" class="navigation navigation-next " aria-label="Next page: Classes"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

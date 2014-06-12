@@ -9,9 +9,10 @@
 * [Classes](classes/README.md)
 * [Enums](enums/README.md)
 * Other
-    * [Protocols](other/protocols.md)
-    * [Extensions](other/extensions.md)
-    * [Operator Overloading](other/operator_overloading.md)
-    * [Emoji/Unicode support](other/emojiunicode_support.md)
+   * [Protocols](other/protocols.md)
+   * [Extensions](other/extensions.md)
+   * [Operator Overloading](other/operator_overloading.md)
+   * [Generics](other/generics.md)
+   * [Emoji/Unicode support](other/emojiunicode_support.md)
 * [GoodBye](goodbye/README.md)
 
