@@ -1,7 +1,8 @@
 # Extensions
 
 Add extra functionality to an already created type
-```js
+
+``` js
 // adds the methods first and rest to the array type
 extension Array {
     func first () -> Any? {
