@@ -1,16 +1,17 @@
 # Closures
 
 Functions are special case closures ({})
+
 ```js
 // Closure example.
 // `->` separates the arguments and return type
 // `in` separates the closure header from the closure body
 var numbers = [1, 2, 3, 4, 5]
 numbers.map({
-  (number: Int) -> Int in
-  let result = 3 * number
-  return result
-  })
+    (number: Int) -> Int in
+    let result = 3 * number
+    return result
+    })
 
 // When the type is known, like above, we can do this
 numbers = [1, 2, 6]
