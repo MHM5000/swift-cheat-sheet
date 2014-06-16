@@ -71,3 +71,4 @@ stepCounter.totalSteps = 145 // About to set totalSteps to 145 \n Added 45 steps
 
 // If you don't need a custom getter and setter, but still want to run code
 // before an after getting or setting a property, you can use `willSet` and `didSet`
+```
