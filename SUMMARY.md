@@ -15,4 +15,3 @@
    * [Generics](other/generics.md)
    * [Emoji/Unicode support](other/emojiunicode_support.md)
 * [GoodBye](goodbye/README.md)
-

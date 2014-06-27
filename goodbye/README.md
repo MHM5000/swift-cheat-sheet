@@ -8,6 +8,6 @@
 
 ## Contributing
 
-Feel free to send a PR or mention an idea, improvement or [issue](https://github.com/grant/swift-cheat-sheet/issues)!
+Feel free to send a PR or mention an idea, improvement or [issue](https://github.com/MHM5000/swift-cheat-sheet/issues)!
 
-And this GitBook is on [MHM5000](https://github.com/MHM5000/swift-cheat-sheet)'s Github page to contribute.
+And this GitBook is on [MHM5000](https://github.com/MHM5000/swift-cheat-sheet)'s GitHub page to contribute.
